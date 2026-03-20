@@ -49,7 +49,7 @@ def update_city(
     return city
 
 
-@router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{city_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_city(city_id: int, db: Session = Depends(get_db)):
     city = db.query(models.City).filter(models.City.id == city_id).first()
     if not city:

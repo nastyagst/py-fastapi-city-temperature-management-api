@@ -2,7 +2,6 @@ import httpx
 import logging
 import os
 from dotenv import load_dotenv
-from fastapi.openapi.models import APIKey
 
 load_dotenv()
 logger = logging.getLogger(__name__)
